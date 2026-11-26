@@ -1,10 +1,11 @@
 # Machine learning for security
 
-Two machine learning projects applied to cybersecurity, carried out during my engineering studies in cybersecurity at ENSIBS (France).
+Three machine learning projects applied to cybersecurity, carried out during my engineering studies in cybersecurity at ENSIBS (France).
 
 | Project | Data | Best model | Key result |
 |---|---|---|---|
 | [Spam detection](spam-detection/) | 2,871 deduplicated emails (426 spam) | TF-IDF + Linear SVC | 96.5% of spam detected, 0 false positives on the test set |
+| [Network intrusion detection](network-intrusion-detection/) | 145,586 deduplicated network connections (KDD Cup 99) | Random Forest + Isolation Forest | 99.86% of known attacks detected at 0.02% false positives; unseen attack families tested separately |
 | [Phishing website detection](phishing-detection/) | 11,055 websites, 11 URL features | Tuned Decision Tree | 70.8% accuracy (10-fold cross-validation) |
 
 ## What these projects show
@@ -17,8 +18,9 @@ Two machine learning projects applied to cybersecurity, carried out during my en
 pip install -r requirements.txt
 cd spam-detection && python spam_detection.py
 cd ../phishing-detection && python phishing_detection.py
+cd ../network-intrusion-detection && python nids.py
 ```
-Each script expects its CSV file in the same folder. The datasets were provided as part of an ENSIBS course and are not redistributed here.
+The NIDS dataset is downloaded by scikit-learn. The spam and phishing scripts expect their CSV file in the same folder; those datasets were provided as part of an ENSIBS course and are not redistributed here.
 
 ## Author
 Yasser Slimani, cybersecurity engineering student (ENSIBS, cyberdefense specialization).
