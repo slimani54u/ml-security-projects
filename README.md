@@ -1,6 +1,6 @@
 # Machine learning for security
 
-Three machine learning projects applied to cybersecurity, carried out during my engineering studies in cybersecurity at ENSIBS (France).
+Three machine learning projects applied to cybersecurity: two ENSIBS (France) lab projects (spam, phishing) and a personal project (network intrusion detection).
 
 | Project | Data | Best model | Key result |
 |---|---|---|---|
